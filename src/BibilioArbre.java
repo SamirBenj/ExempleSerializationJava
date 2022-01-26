@@ -41,19 +41,38 @@ public class BibilioArbre implements Serializable {
          }
 
      }
+    void affiche() {
+         if(filsGauche !=null)
+            filsGauche.affiche();
+         if(!Auteur.equals(""))
+             System.out.println("aut="+Auteur+"Titre ="+ Titre);
+         if(filsDroit != null)
+             filsDroit.affiche();
 
 
-    private static Object charger(String nomFichier) {
     }
 
-    private void saisie() {
+     static Object charger(String nomFichier) {
     }
 
-    private void sauvegarder(String nomFichier) {
+     void saisie() {
+         Scanner sc =  new Scanner(System.in);
+
+         int i;
+         for(i=0;i<=5;i++){
+             System.out.println("Entre l'auteur");
+             String auteur = sc.nextLine();
+
+             System.out.println("Entre le Titre");
+             String titre = sc.nextLine();
+             inserer(auteur, titre);
+         }
     }
 
-    private void affiche() {
+     void sauvegarder(String nomFichier) {
     }
+
+
 
     public static void main(String[] args) {
          BibilioArbre B;
