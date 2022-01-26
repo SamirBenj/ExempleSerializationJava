@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
 import java.util.Scanner;
@@ -69,7 +70,8 @@ public class BibilioArbre implements Serializable {
          }
     }
 
-     void sauvegarder(String nomFichier) {
+     void sauvegarder(String nomFichier) throws IOException {
+
     }
 
 
