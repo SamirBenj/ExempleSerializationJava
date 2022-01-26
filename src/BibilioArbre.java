@@ -25,7 +25,7 @@ public class BibilioArbre implements Serializable {
          if(Auteur.equals(""))
          {Auteur = a; Titre=t;}
          else{
-             if(a < this.Auteur) {
+             if(a.compareTo(Auteur)<=0) {
                  if(filsGauche != null) {
                      filsGauche.inserer(a,t);
                  }else {
